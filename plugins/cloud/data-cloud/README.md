@@ -1,4 +1,4 @@
-# Data Cloud Plugins (Data Agent Kit)
+# Data Cloud Plugins
 
 This directory vendors the [Google Data Cloud](https://cloud.google.com/data-cloud) plugins as **git
 submodules**, so they can be discovered and installed through the central `google/skills` repository. Each
@@ -7,7 +7,7 @@ truth** for that plugin's skills and MCP server definition.
 
 These plugins package product-specific **Skills** and (where applicable) **MCP servers** for their product's
 common user journeys. The set mirrors the layout used by
-[`GoogleCloudPlatform/data-agent-kit`](https://github.com/GoogleCloudPlatform/data-agent-kit).
+[`GoogleCloudPlatform/data-cloud-plugins`](https://github.com/GoogleCloudPlatform/data-cloud-plugins).
 
 ## Installation
 
@@ -16,8 +16,8 @@ common user journeys. The set mirrors the layout used by
 Antigravity CLI installs plugins directly from a repository path. Point `agy` at the plugin you want:
 
 ```bash
-agy plugin install https://github.com/google/skills/plugins/cloud/data-agent-kit/alloydb
-agy plugin install https://github.com/google/skills/plugins/cloud/data-agent-kit/spanner
+agy plugin install https://github.com/google/skills/plugins/cloud/data-cloud/alloydb
+agy plugin install https://github.com/google/skills/plugins/cloud/data-cloud/spanner
 ```
 
 > [!NOTE]
@@ -40,7 +40,7 @@ Each plugin is pinned to the release tag shown. To update the working tree to th
 | **Cloud SQL for MySQL** | [cloud-sql-mysql](https://github.com/gemini-cli-extensions/cloud-sql-mysql) | `0.2.0` | Connect and interact with a Cloud SQL for MySQL database and data. |
 | **Cloud SQL for PostgreSQL** | [cloud-sql-postgresql](https://github.com/gemini-cli-extensions/cloud-sql-postgresql) | `0.4.0` | Create, connect, and interact with a Cloud SQL for PostgreSQL database and data. |
 | **Cloud SQL for SQL Server** | [cloud-sql-sqlserver](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver) | `0.2.0` | Connect to and interact with a Cloud SQL for SQL Server database. |
-| **Data Agent Kit Starter Pack** | [data-agent-kit-starter-pack](https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack) | `0.8.0` | A specialized suite of skills for data engineers and database practitioners on Google Cloud — architect data pipelines, transform data with dbt, write Spark/BigQuery notebooks, and orchestrate end-to-end workflows. |
+| **Data Agent Kit** | [data-agent-kit-plugin](https://github.com/GoogleCloudPlatform/data-agent-kit-plugin) | `0.8.0` | A specialized suite of skills for data engineers and database practitioners on Google Cloud — architect data pipelines, transform data with dbt, write Spark/BigQuery notebooks, and orchestrate end-to-end workflows. |
 | **Dataproc** | [dataproc](https://github.com/gemini-cli-extensions/dataproc) | `0.1.0` | Manage Dataproc clusters and jobs. |
 | **DB Context Engineering Agent** | [db-context-enrichment](https://github.com/GoogleCloudPlatform/db-context-enrichment) | `v0.7.2` | Author and maintain QueryData / Conversational Analytics API context sets that teach the NL→SQL planner your schema vocabulary and golden query shapes. |
 | **Firestore** | [firestore-native](https://github.com/gemini-cli-extensions/firestore-native) | `0.3.4` | Connect and interact with Cloud Firestore. |
@@ -56,11 +56,11 @@ Each submodule's tracked tag is recorded in the top-level `.gitmodules` (`branch
 plugin to a newer release, update its submodule to the new tag and commit the pointer change:
 
 ```bash
-cd plugins/cloud/data-agent-kit/<plugin>
+cd plugins/cloud/data-cloud/<plugin>
 git fetch --tags
 git checkout <new-version>
 cd -
 git config -f .gitmodules submodule.<plugin>.branch <new-version>
-git add .gitmodules plugins/cloud/data-agent-kit/<plugin>
+git add .gitmodules plugins/cloud/data-cloud/<plugin>
 git commit -m "feat(<plugin>): bump to <new-version>"
 ```

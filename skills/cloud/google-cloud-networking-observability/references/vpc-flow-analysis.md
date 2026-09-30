@@ -88,11 +88,8 @@ It allows you to:
 -   Filter by source or destination dimensions.
 -   Identify high-bandwidth or high-latency connections.
 
-### Generic BigQuery Guidelines
+### Generic Guidelines
 
--   **Schema Verification**: Before executing a BigQuery query, if you are
-    uncertain of the casing (for example, `jsonPayload` versus `json_payload`),
-    you MUST run `bq show --schema <source>`.
 -   **Latency Aggregation**: The primary field for RTT analysis in VPC Flow logs
     is `json_payload.round_trip_time.median_msec`. This field offers
     sub-millisecond precision and covers both TCP and Falcon traffic. Filter by
@@ -110,6 +107,18 @@ It allows you to:
     FROM ...
     ```
 
+### Packet Drops Analysis
+
+VPC Flow Logs record dropped packet volume, drop reasons, dropped packet/byte
+counters, and whether dropped traffic is included in sent throughput counters
+(when calculating packet loss rates, only add dropped packets to sent packets
+in the denominator when they are excluded from sent throughput).
+
+-   **Firewall Deny Attribution**: VPC Flow Logs report firewall drops without
+    naming the specific rule. When identifying or ranking the responsible
+    firewall rules, query **Firewall Rules Logging**
+    (`compute.googleapis.com/firewall`).
+
 ## Key Fields
 
 -   **src_ip / dest_ip**: Source and destination IP addresses.
@@ -122,3 +131,7 @@ It allows you to:
     `round_trip_time.median_msec` is preferred due to higher precision and
     broader coverage.
 -   **reporter**: Usually `src` or `dest` indicating which side logged the flow.
+
+## Reference Documentation
+
+-   [VPC Flow Logs record format](https://docs.cloud.google.com/vpc/docs/about-flow-logs-records)

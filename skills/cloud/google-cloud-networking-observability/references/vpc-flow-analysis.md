@@ -119,6 +119,19 @@ in the denominator when they are excluded from sent throughput).
     firewall rules, query **Firewall Rules Logging**
     (`compute.googleapis.com/firewall`).
 
+### Private Service Connect (PSC) Analysis
+
+VPC Flow Logs also cover Private Service Connect (PSC) traffic across endpoints,
+service attachments, and PSC interfaces (PSC-I), capturing the reporting side
+(consumer or producer), endpoint/attachment details, connection IDs, and network
+attachments.
+
+-   **Cross-Project Correlation**: Producer-side flow logs include an annotation
+    of the consumer's original pre-NAT 5-tuple (even though the producer
+    workload does not see it directly), enabling correlation between consumer
+    and producer logs using either the shared connection ID or the consumer
+    connection annotation.
+
 ## Key Fields
 
 -   **src_ip / dest_ip**: Source and destination IP addresses.

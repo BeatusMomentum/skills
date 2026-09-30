@@ -132,6 +132,17 @@ attachments.
     and producer logs using either the shared connection ID or the consumer
     connection annotation.
 
+### Serverless Workloads Analysis
+
+VPC Flow Logs annotate serverless workloads using Direct VPC egress (such as
+Cloud Run and App Engine), capturing workload-specific metadata on source or
+destination.
+
+-   **Dynamic IP Allocation**: Serverless instances dynamically allocate IP
+    addresses from the VPC subnet pool. Rather than filtering by static IP
+    addresses, identify serverless traffic using the serverless workload
+    metadata annotations.
+
 ## Key Fields
 
 -   **src_ip / dest_ip**: Source and destination IP addresses.

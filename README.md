@@ -58,6 +58,9 @@ repo to install.
   - [**Migrating from Gemini API in AI Studio to Agent Platform**](./skills/cloud/agent-platform-migrate-from-ai-studio)
   - [**Skill Registry**](./skills/cloud/agent-platform-skill-registry)
 - **Infrastructure**
+  - [**Cloud Storage Basics**](./skills/cloud/google-cloud-storage-basics)
+  - [**Cloud Storage Bucket Architect**](./skills/cloud/google-cloud-storage-bucket-architect)
+  - [**Cloud Storage FUSE**](./skills/cloud/google-cloud-storage-fuse)
   - [**Designing and Deploying GCP Infrastructure with Application Design Center**](./skills/cloud/application-design-center-design-deploy)
   - [**GKE AI/ML Inference**](./skills/cloud/gke-inference)
   - [**GKE Alert Configuration**](./skills/cloud/gke-alert-configuration)
@@ -91,9 +94,6 @@ repo to install.
   - [**Google Cloud Filestore NFS File Browser**](./skills/cloud/google-cloud-filestore-nfs-browser)
   - [**Google Cloud global external Application Load Balancer Configuration Skill**](./skills/cloud/google-cloud-global-frontend-configuration)
   - [**Google Cloud Networking Observability Expert**](./skills/cloud/google-cloud-networking-observability)
-  - [**Google Cloud Storage Basics**](./skills/cloud/google-cloud-storage-basics)
-  - [**Google Cloud Storage Bucket Architect**](./skills/cloud/google-cloud-storage-bucket-architect)
-  - [**Google Cloud Storage FUSE**](./skills/cloud/google-cloud-storage-fuse)
 - **Databases and analytics**
   - [**AlloyDB Basics**](./skills/cloud/alloydb-basics)
   - [**BigFrames (BigQuery DataFrame) basics**](./skills/cloud/bigquery-bigframes)

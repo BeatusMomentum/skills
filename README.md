@@ -113,10 +113,10 @@ repo to install.
   - [**Managed Service for Apache Airflow (formerly Cloud Composer) Migration Guide**](./skills/cloud/managed-airflow-migrations)
   - [**Spanner Basics**](./skills/cloud/spanner-basics)
 - **Developer tools**
+  - [**Cloud Build Basics**](./skills/cloud/cloud-build-basics)
   - [**Developer Device Platform**](./skills/cloud/developer-device-platform-basics)
   - [**gcloud CLI Skill for AI Agents**](./skills/cloud/gcloud)
   - [**Google Agents CLI Onboarding**](./skills/cloud/google-agents-cli-onboarding)
-  - [**Google Cloud Build Basics**](./skills/cloud/cloud-build-basics)
   - [**Google Developer Knowledge**](./skills/developers/retrieving-developer-knowledge)
 - **Management tools**
   - [**Cloud Monitoring Chart Generation Skill (`cloud-monitoring-chart-generation`)**](./skills/cloud/cloud-monitoring-chart-generation)

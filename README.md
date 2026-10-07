@@ -11,8 +11,11 @@ products and technologies, including [Google Cloud](https://cloud.google.com).
 npx skills add google/skills
 ```
 
-From the `npx install` command, you can select the specific skills from this
-repo to install.
+When prompted, select specific skills or all skills, the target agents to
+configure, and the installation scope (project or global).
+
+If `npx` is not available in your environment, install
+[Node.js](https://nodejs.org/en/download), which includes `npm` and `npx`.
 
 ## Available Skills
 

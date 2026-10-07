@@ -94,6 +94,7 @@ repo to install.
   - [**GKE Workload Troubleshooting Skill**](./skills/cloud/gke-workload-troubleshooting)
   - [**Google Cloud global external Application Load Balancer Configuration Skill**](./skills/cloud/google-cloud-global-frontend-configuration)
   - [**Google Cloud Networking Observability Expert**](./skills/cloud/google-cloud-networking-observability)
+  - [**Troubleshoot unresponsive GKE TPU and GPU nodes (`NodeStatusUnknown`)**](./skills/cloud/gke-ai-troubleshooting-node-unresponsive-timeout)
 - **Databases and analytics**
   - [**AlloyDB Basics**](./skills/cloud/alloydb-basics)
   - [**BigFrames (BigQuery DataFrame) basics**](./skills/cloud/bigquery-bigframes)
